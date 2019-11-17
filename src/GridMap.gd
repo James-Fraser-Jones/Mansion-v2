@@ -14,8 +14,7 @@ func _ready() -> void:
 	if redraw: draw_maze()
 
 func _input(event) -> void:
-	if event.is_action_pressed("generate_maze"):
-		print("Generating Maze...")
+	if event.is_action_pressed("num_bottom_left"):
 		draw_maze()
 
 func draw_maze() -> void:
