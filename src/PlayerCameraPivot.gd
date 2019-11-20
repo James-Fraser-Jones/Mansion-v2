@@ -43,8 +43,8 @@ func _process(delta: float) -> void:
 
 func turn_camera(dir: int, deg: float, x_lock: float) -> void:
 	match dir:
-		UP: rotate_object_local(Vector3.RIGHT, toRad(max(-deg, -x_lock - rotation_degrees.x)))
-		DOWN: rotate_object_local(Vector3.RIGHT, toRad(min(deg, x_lock - rotation_degrees.x)))
+		UP: rotate_object_local(Vector3.RIGHT, toRad(max(-deg, -2*x_lock - rotation_degrees.x)))
+		DOWN: rotate_object_local(Vector3.RIGHT, toRad(min(deg, - rotation_degrees.x)))
 		LEFT: rotate(Vector3.UP, toRad(-deg))
 		RIGHT: rotate(Vector3.UP, toRad(deg))
 

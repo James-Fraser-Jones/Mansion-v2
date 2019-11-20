@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 		var xdiff = result.position.x - global_transform.origin.x
 		var zdiff = result.position.z - global_transform.origin.z
 		var angle = atan2(zdiff, xdiff) + PI/2
-		FlashLight.set_rotation(Vector3(0, -angle, 0))
+		FlashLight.set_rotation(Vector3(FlashLight.rotation.x, -angle, FlashLight.rotation.z))
 
 func slide(x: float, y: float, speed: float, rotation: float) -> void:
 	var angle = atan2(y,x)
