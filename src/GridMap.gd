@@ -26,4 +26,7 @@ func draw_maze() -> void:
 		for colNum in range(maze[0].size()):
 			if maze[rowNum][colNum]:
 				set_cell_item(colNum, 0, rowNum, 2)
+			else:
+				var orientation = Basis(Quat(Vector3(0, 1, 0), deg2rad(-90))).get_orthogonal_index()
+				set_cell_item(colNum, -1, rowNum, 4, orientation)
 
