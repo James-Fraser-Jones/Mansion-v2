@@ -25,5 +25,5 @@ func draw_maze() -> void:
 	for rowNum in range(maze.size()):
 		for colNum in range(maze[0].size()):
 			if maze[rowNum][colNum]:
-				set_cell_item(colNum, 2, rowNum, 0)
+				set_cell_item(colNum, 0, rowNum, 2)
 
